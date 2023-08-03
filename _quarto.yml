@@ -3,6 +3,8 @@ project:
 
 website:
   title: "Smartcard Intervention Impact Evaluation"
+  site-url: "https://viraj-550.github.io/projects/smartcard_intervention"
+  repo-url: "https://github.com/viraj-550/smartcard_intervention"
   navbar:
     right:
       - text: Program Theory
