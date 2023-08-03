@@ -1,0 +1,20 @@
+{
+  "index.qmd": {
+    "index.html": "9e42b4ec"
+  },
+  "synthetic_data.Rmd": {
+    "synthetic_data.html": "be881399"
+  },
+  "program_theory.Rmd": {
+    "program_theory.html": "94043387"
+  },
+  "about.qmd": {
+    "about.html": "67e4040c"
+  },
+  "identification.Rmd": {
+    "identification.html": "75481f94"
+  },
+  "analysis.Rmd": {
+    "analysis.html": "e8fe0125"
+  }
+}

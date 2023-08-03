@@ -1,0 +1,14 @@
+{
+  "hash": "606b6f60d0636b591ea4c7dd81db7898",
+  "result": {
+    "markdown": "---\ntitle: \"Synthetic Data\"\nauthor: \"Viraj R. Chordiya\"\ndate: \"05/01/2023\"\noutput: \n  html_document:\n    code_folding: hide\neditor_options: \n  chunk_output_type: console\n---\n\n\n\n## Data\n\nWe use a mix of administrative and survey data to estimate the causal link between the program and the outcomes of interest. We conduct weekly survey for a 4-week period to measure the household level weekly payments received, time spent (in minutes) at the PoS, days between work is completed and payment is received, and corruption incidences. We compare the weekly payments received to the official disbursement data to estimate the household level leakage in the system, the amount lost in inefficiencies or corruptions. Alongside, we collect data on household characteristics like number of children, number of females in the household, household literacy rate, religion, assets like farmland, and household head age and gender. \n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

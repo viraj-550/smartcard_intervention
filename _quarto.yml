@@ -1,0 +1,24 @@
+project:
+  type: website
+
+website:
+  title: "Smartcard Intervention Impact Evaluation"
+  navbar:
+    right:
+      - text: Program Theory
+        href: program_theory.html
+      - text: Synthetic Data
+        href: synthetic_data.html
+      - text: Identification Strategy
+        href: identification.html
+      - text: Results
+        href: analysis.html
+
+format:
+  html:
+    theme: minty
+    css: styles.css
+    toc: true
+
+editor: visual
+

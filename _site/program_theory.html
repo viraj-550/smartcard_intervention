@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.335">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Viraj R. Chordiya">
+<meta name="dcterms.date" content="2023-05-01">
+
+<title>Smartcard Intervention Impact Evaluation - Program Theory</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Smartcard Intervention Impact Evaluation</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./program_theory.html" aria-current="page">
+ <span class="menu-text">Program Theory</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./synthetic_data.html">
+ <span class="menu-text">Synthetic Data</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./identification.html">
+ <span class="menu-text">Identification Strategy</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./analysis.html">
+ <span class="menu-text">Results</span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#program-theory-and-impact-theory-graph" id="toc-program-theory-and-impact-theory-graph" class="nav-link active" data-scroll-target="#program-theory-and-impact-theory-graph">Program Theory and Impact Theory Graph</a></li>
+  <li><a href="#logic-model" id="toc-logic-model" class="nav-link" data-scroll-target="#logic-model">Logic model</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Program Theory</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Viraj R. Chordiya </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">May 1, 2023</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="program-theory-and-impact-theory-graph" class="level2">
+<h2 class="anchored" data-anchor-id="program-theory-and-impact-theory-graph">Program Theory and Impact Theory Graph</h2>
+<p>The program theory is that biometric authentication and secure payment systems can improve governance by reducing leakages in the delivery systems and reducing payment delays without adversely affecting program access.</p>
+<p>The theory, based on previous research (World Bank 2003; Pritchett 2010, Reinikka and Svensson 2004; Programme Evaluation Organisation 2005; Niehaus and Sukhtankar 2013b) assumes that corruption and leakages are prevalent in government services in developing countries, leading to ineﬀiciencies in assistance delivery systems. By implementing biometric authentication and secure payment systems, the government can ensure that the correct individuals receive the correct payments and services. The Smartcards intervention has a two-fold effect. First, it changes the institutions responsible for managing the funds by eliminating a few intermediaries and moves the point of payment closer to the recipient. Second, it introduces biometric authentication which facilities transparency in the system by providing a secure, tamperproof record of who has received services and payments. This can help to reduce corruption and increase accountability.</p>
+<p>Similar to Muralidharan et al.&nbsp;2016, we consider two main dimensions of impact: payment logistics, and leakages. We also consider multiple scenarios surrounding each dimension. First, the payment logistics could improve or worsen. It could naturally improve the system by moving the point of payment closer to the village, or the program could slow down the process due to technical problems like malfunctioning authentication devices or absence of technical staff. Improving payment logistics will affect the wait times of beneficiaries to access the funds. Secondly, the program could reduce or fail to reduce leakages. Theoretically, smartcards should reduce payments to ghost recipients and forbid oﬀicials to collect payments in the name of real beneficiaries as the beneficiaries must be present to pass the biometric test. But there could be technical loopholes in the payment architecture that could disprove the claim of an absolute secure system. Moreover, the assistance programs’ access could improve or suffer. In case of NREGS, local oﬀicers decide projects and generate employment. Eliminating opportunities to seek rent may disincentivize oﬀicials and they might reduce access. On the other hand, the NREGS funds would directly go towards to the development projects that were originally intended thus creating rural assets and generating more employment.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/Impact_Theory.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Smartcard Program Impact Theory Graph</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="logic-model" class="level2">
+<h2 class="anchored" data-anchor-id="logic-model">Logic model</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/Logic_Model.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Smartcard Program Logic Model</figcaption><p></p>
+</figure>
+</div>
+<ol type="1">
+<li>Inputs:</li>
+</ol>
+<ul>
+<li>Federal and state assistance funds: These funds are required to finance the implementation of the Smartcard intervention as well as NGREGS transfer payments.</li>
+<li>Biometric authentication technology: This technology is required to verify the identity of beneficiaries and ensure that payments are disbursed to the correct individuals.</li>
+<li>Banks: Banks are required to help manage the payment system and ensure that payments are securely and efficiently disbursed to beneficiaries.</li>
+<li>Secure payment systems: Secure payment systems are required to ensure that payments are not lost or stolen during the disbursement process.</li>
+<li>Smartcards: Smartcards are required to store the payment information of beneficiaries and facilitate the payment process.</li>
+<li>Technical staff: Trained staff are required to collect and manage beneficiary information, conduct stress tests, and implement the payment system effectively and efficiently.</li>
+<li>Survey support staff: Survey staff are required to conduct randomized promotion and conduct weekly surveys to collect information on variables of interest.</li>
+</ul>
+<ol start="2" type="1">
+<li>Activities:</li>
+</ol>
+<ul>
+<li>Training staff for data collection and management of payment systems effectively and efficiently</li>
+<li>Collecting beneficiary personal and biometric information to verify individuals.</li>
+<li>Conducting stress tests on the digital payment system to ensure its smooth functioning.</li>
+<li>Implementation of secure payment systems to disburse payments to the correct individuals:</li>
+<li>Conducting door-to-door random promotions and provide information about the program.</li>
+<li>Conducting weekly surveys to collect data.</li>
+</ul>
+<ol start="3" type="1">
+<li>Outputs:</li>
+</ol>
+<ul>
+<li>Number of people using Smartcard technology:</li>
+<li>Percentage change in average wait times at payment centers.</li>
+<li>Amount of money credited for every beneficiary and payment type.</li>
+<li>Amount of money saved: The amount of money saved is a measure of the program’s efficiency and cost-effectiveness.</li>
+<li>Change in leakages and corruption in the system:</li>
+</ul>
+<ol start="4" type="1">
+<li>Outcomes:</li>
+</ol>
+<ul>
+<li>Reduced wait times: The Smartcard intervention is designed to reduce wait times at payment centers and payment delays which can save time and reduce the burden on beneficiaries.</li>
+<li>Increased earnings for the beneficiaries: The Smartcard intervention is designed to improve the delivery of funds for welfare programs, which can increase the earnings of beneficiaries.</li>
+<li>Increased efficiency: The Smartcard program will deliver reduce leakage, ensuring beneficiaries receive more funds in less time without allocating more budget to NREGS.</li>
+<li>Improved trust in government services: The Smartcard intervention is designed to improve the delivery of funds for welfare programs and ensure transparency in the payment system, which can improve trust in government.</li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

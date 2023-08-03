@@ -1,0 +1,14 @@
+{
+  "hash": "b6435347cbb3090dbc78617ac8c60430",
+  "result": {
+    "markdown": "---\ntitle: \"Analysis\"\nauthor: \"Viraj R. Chordiya\"\ndate: \"05/01/2023\"\noutput: \n  html_document:\n    code_folding: hide\neditor_options: \n  chunk_output_type: console\n---\n\n\n# Synthetic Analysis\n\n## Instrument Validity\n\nBased on the first stage model, we see that there is a strong relationship between instrument (randomized promotion) and smartcard enrollment. The randomized promotion is positively correlated with smartcard enrollment. Moreover, the joint F-statistic of the model is 8608 with a p-value less than 0.01. We can reject the hypothesis that the instrument is weak. We can conclude that the instrument is relevant. Since the promotion panchayats are selected through a randomized process, the instrument is not correlated with any observable or unobservable characteristics of households or location. The instrument satisfies exogeneity. Lastly, there is a clear causal mechanism between the randomized promotion and the outcomes of interest. A promotion can only cause leakages, wait times, and corruption to increase or decrease only if a household enrolls into the smartcard program after receiving the promotion. Hence, the instrument satisfies exclusion. \n\n\n## 2SLS Estimation\n\n\nWe can see that the smartcard intervention causes a decrease in leakages by 45.3 rupees for compliers. Moreover, wait time in queue is reduced by 10 minutes. Complier households received payment 3 days earlier, on average, as compared to non-compliers. Lastly, corruption decreased by 0.725 incidences. All estimates are statistically significant at 1% level. These results reinforce our expectations that the smartcard intervention would negatively affect leakage, wait times and corruption faced by the rural workers. \n\n## Robustness Checks\n\nThe Weak Instruments test is as follows:\n\nThe p-value for the test is negligible. Hence we can reject the null hypothesis that our instrument is weak. \n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -1,0 +1,39 @@
+---
+title: "Identification Strategy"
+author: "Viraj R. Chordiya"
+date: "05/01/2023"
+output: 
+  html_document:
+    code_folding: hide
+editor_options: 
+  chunk_output_type: console
+---
+
+
+## Identification Strategy
+
+We use an instrumental variable design to identify the causal link between the smartcard program and outcomes like leakages, wait times and corruption. The NREGS program has a universal access and hence it fair to provide universal access to the smartcard program that facilitates the NREGS welfare program. In this scenario, we suspect that households that enroll into the smartcard intervention are fundamentally different than the households that do not enroll. For example, poor households with fewer job opportunities or literate households can be more likely to enroll into the program. There exists a host of household and geographic characteristics that influence enrollment into the program and the outcomes. Due to limitations, we cannot measure every variable. In this scenario, we use randomized promotion as an instrumental variable.
+
+The instrumental variable approach isolates the causal effect of the program on the outcome by using the variation in the treatment induced by the instrument. By comparing the outcomes of households who received treatment through the instrument with those who did not receive treatment through the instrument, we can estimate the causal effect of the program on the outcomes of choice. 
+
+Specifically, the randomized promotion ensures that the distribution of observable and unobservable characteristics between the treatment and control groups is balanced, reducing the potential for selection bias. Furthermore, the instrumental variable approach addresses endogeneity by focusing on the exogenous variation in the randomized promotion, rather than the endogenous relationship between the program and outcomes, thus isolating the causal effect of the program on the outcomes of interest. This approach allows us to obtain an unbiased estimate of the causal effect of the program, even in the presence of selection bias and endogeneity. 
+
+Our identification strategy takes the form of two-staged least squares (2SLS) instrumental variable. 
+In the first stage, we estimate the effect of randomized promotion on the endogenous smartcard enrollment. Hence, we estimate:
+
+$$
+\text{Smartcard}= \beta_{0} + \beta \text{Promotion} + \gamma X + u
+$$
+Where $\text{Smartcard}$ is a binary indicator of whether a household enrolled into the program, and $X$ is a vector of covariates. 
+
+The general form of the second stage least squares is as follows:
+$$
+\text{Outcome}_i =  \beta_{0_i} + \beta_i \hat{\text{Smartcard}} + \gamma_i X + \epsilon_i
+$$
+
+Where $\text{Outcome }_i = \{\text{Leakage}, \text{Queue Wait Time }, \text{Payment Delay}, \text{Corruption} \}$
+
+Overall, the instrumental variable approach using randomized promotion provides a rigorous and credible method for estimating the causal effects of the smartcard program on the outcomes of interest, while also addressing potential issues of selection bias and endogeneity.
+
+A DAG for the outcome is as follows:
+

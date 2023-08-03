@@ -1,0 +1,28 @@
+---
+title: "Analysis"
+author: "Viraj R. Chordiya"
+date: "05/01/2023"
+output: 
+  html_document:
+    code_folding: hide
+editor_options: 
+  chunk_output_type: console
+---
+
+# Synthetic Analysis
+
+## Instrument Validity
+
+Based on the first stage model, we see that there is a strong relationship between instrument (randomized promotion) and smartcard enrollment. The randomized promotion is positively correlated with smartcard enrollment. Moreover, the joint F-statistic of the model is 8608 with a p-value less than 0.01. We can reject the hypothesis that the instrument is weak. We can conclude that the instrument is relevant. Since the promotion panchayats are selected through a randomized process, the instrument is not correlated with any observable or unobservable characteristics of households or location. The instrument satisfies exogeneity. Lastly, there is a clear causal mechanism between the randomized promotion and the outcomes of interest. A promotion can only cause leakages, wait times, and corruption to increase or decrease only if a household enrolls into the smartcard program after receiving the promotion. Hence, the instrument satisfies exclusion. 
+
+
+## 2SLS Estimation
+
+
+We can see that the smartcard intervention causes a decrease in leakages by 45.3 rupees for compliers. Moreover, wait time in queue is reduced by 10 minutes. Complier households received payment 3 days earlier, on average, as compared to non-compliers. Lastly, corruption decreased by 0.725 incidences. All estimates are statistically significant at 1% level. These results reinforce our expectations that the smartcard intervention would negatively affect leakage, wait times and corruption faced by the rural workers. 
+
+## Robustness Checks
+
+The Weak Instruments test is as follows:
+
+The p-value for the test is negligible. Hence we can reject the null hypothesis that our instrument is weak. 
